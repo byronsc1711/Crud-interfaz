@@ -1,27 +1,38 @@
-# Blog
+se debe copiar en appmodule lo siguiente: estas son las rutas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
+  {path: '', component: PrincipalComponent},
+  {path: 'menu', component: PrincipalComponent},
+  {path: 'blogs', component: Blog1Component},
+  {path: 'form1', component: Form1Component},
+  {path: 'form1/id', component: Form1Component},
+  {path: 'cat', component: Categ1Component},
+  {path: 'form2', component: Form2Component},
+  {path: 'com', component: Coment1Component},
+  {path: 'form3', component: Form3Component},
+  
+  //esto va en declarations
+    PrincipalComponent,
+    Blog1Component,
+    Form1Component,
+    Categ1Component,
+    Form2Component,
+    Coment1Component,
+    Form3Component
+    
+    en imports va lo siguiente
+    
+    RouterModule.forRoot(routes)
+    
+    
+En el archivo llamado app.component.html va 
 
-## Development server
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Se debe copiar primero todos los archivos que se encuentran en la carpeta components
+Se debe copiar dentro de la carpeta pages/blogs todos los elementos que son blog1 y form1
+Se debe copiar dentro de la carpeta pages/categorias todos los elementos de categ1 y form2
+Se debe copiar dentro de la carpeta pages/comentarios todos los elementos de coment1 y form3
+En la carpeta services se debe copiar el archivo data.service
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
