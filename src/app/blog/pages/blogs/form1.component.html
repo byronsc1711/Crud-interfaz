@@ -1,0 +1,32 @@
+<form (ngSubmit)="insertData()">
+      <div class="form-group">
+        <label for="tittle" class="form-label">Título</label>
+        <input type="text" class="form-control" id="tittle" placeholder="Ingresar título" [(ngModel)]="prueba.tittle" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <label for="summary" class="form-label">Resumen</label>
+        <input type="text" class="form-control" id="summary" placeholder="Ingresar resumen" [(ngModel)]="prueba.summary" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <textarea name="content" rows="7" cols="120" [(ngModel)]="prueba.content" [ngModelOptions]="{standalone: true}">Contenido </textarea>
+      </div>
+      <div class="form-group">
+        <label for="url" class="form-label">Imagen</label>
+        <input type="text" class="form-control" id="comment" placeholder="Ingresar comentario" [(ngModel)]="prueba.url" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        Categorías
+        <select name="cars" id="cars">
+          <option value="deportes">Deportes</option>
+          <option value="salud">Salud</option>
+          <option value="noticias">Noticias</option>
+          <option value="anime">Anime</option>
+        </select>
+      </div>
+      <br>
+      
+      <div class="btn-group">
+        <button type="submit" (click)="createData()" class="btn btn-success">GUARDAR</button>
+        <a href="/blogs"> <button type="button" class="btn btn-danger">REGRESAR</button></a>
+      </div>
+    </form>

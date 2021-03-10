@@ -1,0 +1,60 @@
+<h1>PANEL ADMINISTRATIVO</h1>
+<br>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/blogs" class="list-group-item">BLOGS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cat" class="list-group-item">CATEGORÍAS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/com" class="list-group-item">COMENTARIOS</a>
+          </li>
+          
+          </ul>
+      </div>
+    </div>
+  </nav>
+<hr>
+<br>
+<div class="center">
+<a href="/form2">
+<button type="submit" class="btn btn-info">AGREGAR CATEGORIA</button>
+</a>
+</div>
+<br>
+<br>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Título</th>
+        <th scope="col">Detalle</th>
+        <th scope="col">Imagen</th>
+        <th scope="col">Categoría</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let blog of blogs">
+        <th>{{blog.id}}</th>
+        <td>{{blog.tittle}}</td>
+        <td>{{blog.summary}}</td>
+        <td>{{blog.url}} </td>
+        <td>{{blog.category_id}}</td>
+        <td>
+          <a href="/form2">
+            <button type="submit" class="btn btn-success">Editar</button>
+          </a>
+            
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </td>
+    </tbody>
+  </table>
